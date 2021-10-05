@@ -1,0 +1,96 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@Vanshika-11 
+Adi8080
+/
+Hactoberfest2021
+Public
+1
+939
+Code
+Issues
+1
+Pull requests
+3
+Actions
+Projects
+Wiki
+Security
+Insights
+Hactoberfest2021/Java_DSA/Sorting Algorithms/Bubble_Sort.java /
+@Vanshika-11
+Vanshika-11 Create Bubble_Sort.java
+…
+Latest commit 121a4ca 3 hours ago
+ History
+ 1 contributor
+50 lines (40 sloc)  756 Bytes
+   
+import java.io.*;
+
+class Bubble_Sort
+{
+	
+	static void bubbleSort(int arr[], int n)
+	{
+		int i, j, temp;
+		boolean swapped;
+		for (i = 0; i < n - 1; i++)
+		{
+			swapped = false;
+			for (j = 0; j < n - i - 1; j++)
+			{
+				if (arr[j] > arr[j + 1])
+				{
+					temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+					swapped = true;
+				}
+			}
+
+			
+			if (swapped == false)
+				break;
+		}
+	}
+
+
+	static void printArray(int arr[], int size)
+	{
+		int i;
+		for (i = 0; i < size; i++)
+			System.out.print(arr[i] + " ");
+		System.out.println();
+	}
+
+
+	public static void main(String args[])
+	{
+		int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+		int n = arr.length;
+		bubbleSort(arr, n);
+		System.out.println("Sorted array: ");
+		printArray(arr, n);
+	}
+}
+
+
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
